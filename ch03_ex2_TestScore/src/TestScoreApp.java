@@ -25,8 +25,8 @@ public class TestScoreApp {
             // accumulate score count and score total
             if (testScore <= 100)
             {
-                scoreCount = scoreCount + 1;
-                scoreTotal = scoreTotal + testScore;
+                scoreCount++;				// <- increasing score count (Compound Assignment)
+                scoreTotal += testScore;	// <- increasing score total (Compound Assignment)
             }
             else if (testScore != 999)
                 System.out.println("Invalid entry, not counted");
