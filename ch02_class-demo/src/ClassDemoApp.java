@@ -31,6 +31,10 @@ public class ClassDemoApp {
 		counter += 1;
 		counter++;
 		System.out.println("Counter = " + counter);
+		
+		String fName = "Matthew";
+		String mName = "Jacob";
+		String lName = "Childers";
 
 	}
 
