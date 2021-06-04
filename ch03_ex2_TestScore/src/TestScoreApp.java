@@ -39,5 +39,6 @@ public class TestScoreApp {
                 + "Score total:   " + scoreTotal + "\n"
                 + "Average score: " + averageScore + "\n";
         System.out.println(message);
+        sc.close();
     }
 }
