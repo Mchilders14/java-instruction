@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class FutureValueApp {
 
+    String choice = "y";
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Future Value Calculator\n");
 
@@ -27,11 +29,7 @@ public class FutureValueApp {
 
             printFormattedResults(monthlyInvestment, interestRate, years, futureValue);
 
-            // see if the user wants to continue
-            System.out.print("Continue? (y/n): ");
-            choice = sc.next();
-            sc.nextLine();  // discard any other data entered on the line
-            System.out.println();
+            choice = askToContinue(sc);
         }
     }
     
@@ -53,6 +51,14 @@ public class FutureValueApp {
         System.out.println(results);
     }
     
+    public static String askToContinue(Scanner sc) {
+        // see if the user wants to continue
+        System.out.print("Continue? (y/n): ");
+        String choice = sc.next();
+        sc.nextLine();  // discard any other data entered on the line
+        System.out.println();
+		return choice;
+    }
     
     public static double getDoubleWithinRange(Scanner sc, String prompt,
             double min, double max) {
