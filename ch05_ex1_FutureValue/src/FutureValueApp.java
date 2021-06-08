@@ -25,21 +25,7 @@ public class FutureValueApp {
             double futureValue = calculateFutureValue(
                     monthlyInvestment, monthlyInterestRate, months);
 
-            // get the currency and percent formatters
-            NumberFormat c = NumberFormat.getCurrencyInstance();
-            NumberFormat p = NumberFormat.getPercentInstance();
-            p.setMinimumFractionDigits(1);
-
-            // format the result as a single string
-            String results
-              = "Monthly investment:   " + c.format(monthlyInvestment) + "\n"
-              + "Yearly interest rate: " + p.format(interestRate / 100) + "\n"
-              + "Number of years:      " + years + "\n"
-              + "Future value:         " + c.format(futureValue) + "\n";
-
-            // print the results
-            System.out.println("FORMATTED RESULTS");
-            System.out.println(results);
+            printFormattedResults(monthlyInvestment, interestRate, years, futureValue);
 
             // see if the user wants to continue
             System.out.print("Continue? (y/n): ");
@@ -48,7 +34,26 @@ public class FutureValueApp {
             System.out.println();
         }
     }
-
+    
+    public static void printFormattedResults(double monthlyInvestment, double interestRate, int years, double futureValue) {
+    	// get the currency and percent formatters
+        NumberFormat c = NumberFormat.getCurrencyInstance();
+        NumberFormat p = NumberFormat.getPercentInstance();
+        p.setMinimumFractionDigits(1);
+        
+        // format the result as a single string
+    	String results
+        = "Monthly investment:   " + c.format(monthlyInvestment) + "\n"
+        + "Yearly interest rate: " + p.format(interestRate / 100) + "\n"
+        + "Number of years:      " + years + "\n"
+        + "Future value:         " + c.format(futureValue) + "\n";
+    	
+    	// print the results
+    	System.out.println("FORMATTED RESULTS");
+        System.out.println(results);
+    }
+    
+    
     public static double getDoubleWithinRange(Scanner sc, String prompt,
             double min, double max) {
         double d = 0;
