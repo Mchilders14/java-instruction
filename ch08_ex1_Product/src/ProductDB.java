@@ -36,7 +36,15 @@ public class ProductDB {
             s.setPrice(0.00);
             s.setVersion("8.2");
             p = s; // set Product object equal to the Software object
+        } else if (productCode.equalsIgnoreCase("music")) {
+            Album a = new Album();
+            a.setCode("music");
+            a.setDescription("White Album");
+            a.setPrice(9.99);
+            a.setArtist("The Beatles");
+            p = a; // set Product object equal to the Software object
         }
+        
         return p;
     }
 }

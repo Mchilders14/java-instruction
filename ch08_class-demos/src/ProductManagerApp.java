@@ -25,7 +25,9 @@ public class ProductManagerApp {
 		
 		Book b2 = (Book) p;
 		
-		
+		//Product p3 = new Product();		<- Doesnt work
+		//Book b3 = (Book) p3;				<- Doesnt Work
+
 
 	}
 

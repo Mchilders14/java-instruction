@@ -1,6 +1,6 @@
 import java.text.NumberFormat;
 
-public class Product {
+public abstract class Product {
 
     private String code;
     private String description;
@@ -9,6 +9,8 @@ public class Product {
 
     public Product() {
     }
+    
+    public abstract String getDisplayText();
 
     public void setCode(String code) {
         this.code = code;

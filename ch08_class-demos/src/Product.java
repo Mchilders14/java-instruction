@@ -48,6 +48,12 @@ public class Product {
 
 	@Override
 	public boolean equals(Object obj) {
+		boolean sameData = false;
+		if (obj instanceof Product) {
+			Product p = (Product)obj;
+			if(p.getCode().equals(code));
+			sameData = true;
+		}
 		return super.equals(obj);
 	}
 	

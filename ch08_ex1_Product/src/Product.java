@@ -5,12 +5,19 @@ public class Product {
     private String code;
     private String description;
     private double price;
-    protected static int count = 0;
+    static int count = 0;
 
     public Product() {
-    }
+    }   
 
-    public void setCode(String code) {
+    public Product(String code, String description, double price) {
+		super();
+		this.code = code;
+		this.description = description;
+		this.price = price;
+	}
+
+	public void setCode(String code) {
         this.code = code;
     }
 
